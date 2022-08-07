@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Guide | InfyCare</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/circular-std-font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.js"></script>
+    <meta name="description" content="InfyCare Description here.">
+
+    <link rel="preload" href="../assets/css/0.styles.80eda119.css" as="style">
+    <link rel="preload" href="../js/styles.js" as="script">
+    <link rel="preload" href="../js/1.js" as="script">
+    <link rel="preload" href="../js/2.js" as="script">
+    <link rel="preload" href="../js/10.js" as="script">
+    <link rel="prefetch" href="../js/11.js">
+    <link rel="prefetch" href="../js/12.js">
+    <link rel="prefetch" href="../js/3.js">
+    <link rel="prefetch" href="../js/4.js">
+    <link rel="prefetch" href="../js/5.js">
+    <link rel="prefetch" href="../js/6.js">
+    <link rel="prefetch" href="../js/7.js">
+    <link rel="prefetch" href="../js/8.js">
+    <link rel="prefetch" href="../js/9.js">
+    <link rel="stylesheet" href="../assets/css/0.styles.80eda119.css">
+</head>
+<body>
+<div id="app" data-server-rendered="true">
+    <div class="theme-container">
+        <header class="navbar">
+            <div class="sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"
+                     class="icon">
+                    <path fill="currentColor"
+                          d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+                </svg>
+            </div>
+            <a href="/" class="home-link router-link-active"><img src="../images/logo.png" alt="InfyCare" class="logo">
+                <span class="site-name can-hide">InfyCare</span></a>
+            <div class="links"><!---->
+                <nav class="nav-links can-hide">
+                    <div class="nav-item"><a href="../index.html" class="nav-link">
+                        Home
+                    </a></div>
+                    <div class="nav-item"><a href="../docs/index.html" aria-current="page"
+                                             class="nav-link router-link-exact-active router-link-active">
+                        Docs
+                    </a></div>
+                    <div class="nav-item"><a href="../releases/index.html" class="nav-link">
+                        Releases
+                    </a></div>
+                    <div class="nav-item"><a href="../upgrade/index.html" class="nav-link">
+                        Upgrade Guide
+                    </a></div> <!----></nav>
+            </div>
+        </header>
+        <div class="sidebar-mask"></div>
+        <aside class="sidebar">
+            <nav class="nav-links">
+                <div class="nav-item"><a href="/" class="nav-link">
+                    Home
+                </a></div>
+                <div class="nav-item"><a href="docs/index.html" aria-current="page"
+                                         class="nav-link router-link-exact-active router-link-active">
+                    Docs
+                </a></div>
+                <div class="nav-item"><a href="releases/index.html" class="nav-link">
+                    Releases
+                </a></div>
+                <div class="nav-item"><a href="upgrade/index.html" class="nav-link">
+                    Upgrade Guide
+                </a></div> <!----></nav>
+            <ul class="sidebar-links">
+                <li>
+                    <section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!---->
+                    </p>
+                        <ul class="sidebar-links sidebar-group-items">
+                            <li><a href="#technologies-used" class="sidebar-link">Technologies Used</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#installation-guide" class="sidebar-link">Installation Guide</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#system-requirement"
+                                                                      class="sidebar-link">System Requirement</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#setup-infycare-into-local-environment" class="sidebar-link">Setup
+                                InfyCare into Local Environment</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a
+                                            href="#_1-install-xampp-wamp-if-you-don-t-have-it"
+                                            class="sidebar-link">1. Install xampp/wamp (if you don't have it).</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_2-create-folder-infycare"
+                                                                      class="sidebar-link">2. Create folder InfyCare</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a
+                                            href="#_3-unzip-dist-src-zip-to-infycare-folder" class="sidebar-link">3.
+                                        Unzip dist/src zip to InfyCare folder</a></li>
+                                    <li class="sidebar-sub-header"><a
+                                            href="#_4-point-the-domain-to-the-uploaded-folder"
+                                            class="sidebar-link">4. Point the domain to the uploaded folder</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_5-steps-to-setting-up-the-project"
+                                                                      class="sidebar-link">5. Steps to setting up the
+                                        project</a></li>
+                                    <li class="sidebar-sub-header"><a href="#setup-infycare-system"
+                                                                      class="sidebar-link">Setup InfyCare System</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#_1-copy-files-to-web-server"
+                                                                      class="sidebar-link">1. Copy files to web
+                                        server</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_2-setup-your-database"
+                                                                      class="sidebar-link">2. Setup your database</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#_3-setup-environment-env-file"
+                                                                      class="sidebar-link">3. Setup environment .env
+                                        file</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_4-admin-login" class="sidebar-link">4.
+                                        Admin login</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_4-doctor-login"
+                                                                      class="sidebar-link">4. Doctor login</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_4-patient-login"
+                                                                      class="sidebar-link">4. Patient login</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#key-features-and-concepts" class="sidebar-link">Key Features and
+                                Concepts</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#landing-page" class="sidebar-link">Landing Page</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#admin-panel" class="sidebar-link">Admin Panel</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#dashboard" class="sidebar-link">Dashboard</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#staff-management"
+                                                                      class="sidebar-link">Staff Management</a></li>
+                                    <li class="sidebar-sub-header"><a href="#doctors-management"
+                                                                      class="sidebar-link">Doctors Management</a></li>
+                                    <li class="sidebar-sub-header"><a href="#patient-management"
+                                                                      class="sidebar-link">Patient Management</a></li>
+                                    <li class="sidebar-sub-header"><a href="#appointments-management"
+                                                                      class="sidebar-link">Appointments Management</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#patient-visits-management"
+                                                                      class="sidebar-link">Patient Visits Management</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#services-categories-management"
+                                                                      class="sidebar-link">Services &amp; Categories
+                                        Management</a></li>
+                                    <li class="sidebar-sub-header"><a href="#front-cms" class="sidebar-link">Front
+                                        CMS</a></li>
+                                    <li class="sidebar-sub-header"><a href="#schedules" class="sidebar-link">Schedules</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#settings" class="sidebar-link">Settings</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#doctor-panel" class="sidebar-link">Doctor Panel</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#dashboard-2" class="sidebar-link">Dashboard</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#appointments" class="sidebar-link">Appointments</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#schedules-2" class="sidebar-link">Schedules</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#patient-visits-management-2"
+                                                                      class="sidebar-link">Patient Visits Management</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#patient-panel" class="sidebar-link">Patient Panel</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#dashboard-3" class="sidebar-link">Dashboard</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#appointments-2" class="sidebar-link">Appointments</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#visits-listing" class="sidebar-link">Visits
+                                        Listing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </aside>
+        <main class="page">
+            <div class="theme-default-content content__default"><h1 id="guide"><a href="#guide"
+                                                                                  class="header-anchor">#</a> Guide</h1>
+                <p>The goal of InfyCare is to Manage your hospital appointment booking digitally.</p>
+                <h2 id="technologies-used"><a href="#technologies-used" class="header-anchor">#</a> Technologies Used
+                </h2>
+                <p>This system uses multiple technologies to give the best possible experience.</p>
+                <ul>
+                    <li>PHP with Laravel Framework 8.0</li>
+                    <li>MySQL 5.6+</li>
+                    <li>PHP 7.4+</li>
+                    <li>jQuery</li>
+                    <li>Ajax</li>
+                </ul>
+                <h2 id="installation-guide"><a href="#installation-guide" class="header-anchor">#</a> Installation Guide
+                </h2>
+                <p>We tried our best to make the installation of the system as easy as possible.
+                    System Requirements
+                    It is assumed that you have primary knowledge Laravel installation knowledge since this application
+                    is built on Laravel.</p>
+                <h3 id="system-requirement"><a href="#system-requirement" class="header-anchor">#</a> System Requirement
+                </h3>
+                <p>It is assumed that you have primary knowledge Laravel and JS application installation knowledge since
+                    this application is built on Laravel with JS.</p>
+                <p>You can read about laravel Requirements <a href="https://laravel.com/docs/8.x#server-requirements"
+                                                              target="_blank" rel="noopener noreferrer">here<span><svg
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                        viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor"
+                                                                                                 d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                        fill="currentColor"
+                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                        class="sr-only">(opens new window)</span></span></a></p>
+                <p>(Optional)
+                    You need update below variables in php.ini file if you want to send bigger files.</p>
+                <p>upload_max_filesize = 50M</p>
+                <p>max_file_uploads = 50</p>
+                <p>post_max_size = 100M</p>
+                <h2 id="setup-infycare-into-local-environment"><a href="#setup-infycare-into-local-environment"
+                                                                  class="header-anchor">#</a> Setup InfyCare into Local
+                    Environment</h2>
+                <p>You can set up InfyCare into your local by using given zip.</p>
+                <p>Here are some steps to set up InfyCare into your local environment :</p>
+                <h3 id="_1-install-xampp-wamp-if-you-don-t-have-it"><a
+                        href="#_1-install-xampp-wamp-if-you-don-t-have-it" class="header-anchor">#</a> 1. Install
+                    xampp/wamp (if you don't have it).</h3>
+                <h3 id="_2-create-folder-infycare"><a href="#_2-create-folder-infycare" class="header-anchor">#</a> 2.
+                    Create folder <code>InfyCare</code></h3>
+                <ul>
+                    <li>if you are using wamp then create InfyCare folder under you_path_to_wamp/www/</li>
+                    <li>if you are using xampp then create InfyCare folder under you_path_to_xampp/htdocs/</li>
+                </ul>
+                <h3 id="_3-unzip-dist-src-zip-to-infycare-folder"><a href="#_3-unzip-dist-src-zip-to-infycare-folder"
+                                                                     class="header-anchor">#</a> 3. Unzip dist/src zip
+                    to InfyCare folder</h3>
+                <h3 id="_4-point-the-domain-to-the-uploaded-folder"><a
+                        href="#_4-point-the-domain-to-the-uploaded-folder" class="header-anchor">#</a> 4. Point the
+                    domain to the uploaded folder</h3>
+                <p>You need to create virtual host first to setup InfyCare. You can find steps here to create virtual
+                    host.</p>
+                <ul>
+                    <li>You can find steps <a
+                            href="https://www.cloudways.com/blog/configure-virtual-host-on-windows-10-for-wordpress/"
+                            target="_blank" rel="noopener noreferrer">here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     aria-hidden="true"
+                                                                                     focusable="false" x="0px" y="0px"
+                                                                                     viewBox="0 0 100 100" width="15"
+                                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a> to create virtual host on
+                        <code>XAMPP</code>.
+                    </li>
+                    <li>You can find steps <a
+                            href="http://codedecode.co.in/blog/wordpress/set-up-virtual-host-with-wamp/" target="_blank"
+                            rel="noopener noreferrer">here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                     aria-hidden="true" focusable="false" x="0px"
+                                                                     y="0px" viewBox="0 0 100 100" width="15"
+                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a> to create virtual host on
+                        <code>WAMP</code>.
+                    </li>
+                </ul>
+                <p>Point your domain or subdomain to the InfyCare folder.</p>
+                <p>Please note that, InfyCare must be installed on a primary domain or subdomain. Installing on a
+                    sub-folder will not work, for example:</p>
+                <div class="language- extra-class"><pre><code>    example.com/InfyCare (Invalid)
+    localhost/InfyCare (Invalid) if you are putting it in sub folder or root website)
+    example.com (Valid)
+    local.InfyCare.com (Valid)
+    InfyCare.test (Valid)
+</code></pre>
+                </div>
+                <h3 id="_5-steps-to-setting-up-the-project"><a href="#_5-steps-to-setting-up-the-project"
+                                                               class="header-anchor">#</a> 5. Steps to setting up the
+                    project</h3>
+                <p>Please <a href="#_2-setup-your-database">click here</a> to follow the next steps for setting up the
+                    project</p>
+                <h3 id="setup-infycare-system"><a href="#setup-infycare-system" class="header-anchor">#</a> Setup
+                    InfyCare System</h3>
+                <p>If you have purchased the InfyCare system then you will be able to find the zip named
+                    <code>dist.zip</code>.</p>
+                <p>Now if you want to set up InfyCare on your server then you can directly copy the
+                    <code>dist.zip</code> folder to your web root directory on a server and the following steps:</p>
+                <h3 id="_1-copy-files-to-web-server"><a href="#_1-copy-files-to-web-server" class="header-anchor">#</a>
+                    1. Copy files to web server</h3>
+                <p>Upload <code>dist.zip</code> to your web server's root (public_html) and extract it there.</p>
+                <h3 id="_2-setup-your-database"><a href="#_2-setup-your-database" class="header-anchor">#</a> 2. Setup
+                    your database</h3>
+                <ol>
+                    <li>Open PHPMyAdmin on your server and do a login.</li>
+                </ol>
+                <p><img src="../images/docs-images/db1.png" alt="Setup Default DB"></p>
+                <ol start="2">
+                    <li>Click on the Databases tab.</li>
+                </ol>
+                <p><img src="../images/docs-images/db2.png" alt="Setup Default DB"></p>
+                <ol start="3">
+                    <li>Create a new database and specify a Database name of your choice and Click Create button.</li>
+                </ol>
+                <p><img src="../images/docs-images/db3.png" alt="Setup Default DB"></p>
+                <ol start="4">
+                    <li><p>Now on the left, select the database (infy_care) OR the one that you have created.</p></li>
+                    <li><p>Click Import in the top menu</p></li>
+                </ol>
+                <p><img src="../images/docs-images/db4.png" alt="Setup Default DB"></p>
+                <ol start="6">
+                    <li>Under Import, choose the default sql file from dist/database/infy_care.sql and click button
+                        Go.
+                    </li>
+                </ol>
+                <p><img src="../images/docs-images/db5.png" alt="Setup Default DB"></p>
+                <h3 id="_3-setup-environment-env-file"><a href="#_3-setup-environment-env-file"
+                                                          class="header-anchor">#</a> 3. Setup environment .env file
+                </h3>
+                <ol>
+                    <li>Open .env file from your server's root folder.</li>
+                </ol>
+                <p><img src="../images/docs-images/setup.jpg" alt="Setup Default DB"></p>
+                <ol start="2">
+                    <li>Update your .env file</li>
+                </ol>
+                <p>You need to change the following information into your environment (.env) file.</p>
+                <div class="language- extra-class"><pre><code>- APP_NAME - Name of your Application
+- APP_URL - Change this URL with your server URL (including trailing path if you are putting it in sub folder or root website)
+- DB_HOST - Put your database hostname here
+- DB_PORT - Put your database port here if it does not default to 3306
+- DB_DATABASE - Change it to your database name
+- DB_USERNAME - Name of your database user
+- DB_PASSWORD - Password of your database user
+</code></pre>
+                </div>
+                <p>You will also need to set up mail configuration, you can read more about here for that setup based on
+                    mail service that you use.</p>
+                <div class="language- extra-class"><pre><code>- MAIL_DRIVER 
+- MAIL_HOST
+- MAIL_PORT
+- MAIL_USERNAME
+- MAIL_PASSWORD
+- MAIL_ENCRYPTION
+- MAIL_FROM_ADDRESS 
+- MAIL_FROM_NAME
+</code></pre>
+                </div>
+                <p>If you want to store your files to direct your <code>s3</code> bucket then you have to use following
+                    <code>.env</code> variables.
+                    You need to change <code>FILESYSTEM_DRIVER</code> and <code>MEDIA_DISK</code> value to
+                    <code>s3</code> when you are using AWS file storage.</p>
+                <div class="language- extra-class"><pre><code>- AWS_ACCESS_KEY_ID=
+- AWS_SECRET_ACCESS_KEY=
+- AWS_DEFAULT_REGION=us-east-1
+- AWS_BUCKET=
+- AWS_ENDPOINT=
+- AWS_URL=
+</code></pre>
+                </div>
+                <p>Or you can use your choice of storage driver to store your media assets if you want. All of your
+                    attachments will be placed into that.</p>
+
+                <p>Set Stripe configuration it is using while book appointment payments. Here are some links by using it you will get an idea about how to generate stripe API keys.</p>
+                <ul>
+                    <li>
+                        <a href="https://support.stripe.com/questions/locate-api-keys-in-the-dashboard"
+                           target="_blank" rel="noopener noreferrer">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="https://help.sharetribe.com/en/articles/1055989-how-to-configure-your-stripe-account-and-get-api-keys-for-your-marketplace
+"
+                           target="_blank" rel="noopener noreferrer">Link 2</a>
+                    </li>
+                </ul>
+                <div class="language- extra-class"><pre><code>- STRIPE_KEY=
+- STRIPE_SECRET_KEY=
+- STRIPE_WEBHOOK_SECRET_KEY=
+</code></pre>
+                </div>
+                <p>Also, please set the google captcha keys too. <a
+                        href="https://www.iqcomputing.com/support/articles/generate-google-recaptcha-v2-keys/"
+                        target="_blank" rel="noopener noreferrer">Here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 aria-hidden="true" focusable="false"
+                                                                                 x="0px" y="0px" viewBox="0 0 100 100"
+                                                                                 width="15" height="15"
+                                                                                 class="icon outbound"><path
+                        fill="currentColor"
+                        d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                        fill="currentColor"
+                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                        class="sr-only">(opens new window)</span></span></a> is link to generate and get the keys of
+                    google captcha.
+                </p>
+                <div class="language- extra-class"><pre><code>- NOCAPTCHA_SECRET=
+- NOCAPTCHA_SITEKEY=
+</code></pre>
+                </div>
+                <p>Follow below guide to make the Google Calendar Integration works. you need to set following env.
+                    You need to enable the google calendar API, Please <a
+                            href="https://weblizar.com/blog/get-google-calendar-client-id-and-client-secret-key/"
+                            target="_blank" rel="noopener noreferrer">Click Here<span><svg
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                            viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor"
+                                                                                                     d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a> to generate the the OAuth file.
+                </p>
+                <p>Also <a href="https://www.youtube.com/watch?v=6bzzpda63H0" target="_blank" rel="noopener noreferrer">Watch
+                    this video<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px"
+                                         y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a> to get the file.
+                </p>
+                <p>Set the redirect URL to : <code>YOUR_APP_URL/google/redirect</code> // e.g
+                    https://infy-care.com/google/redirect</p>
+                <p>Put the downloaded file to <code>storage/your-file-name.json</code></p>
+                <div class="language- extra-class"><pre><code>- GOOGLE_OAUTH_PATH=&quot;your-file-name.json&quot;
+</code></pre>
+                </div>
+                <p>Set up the Paystack Credentials into env:</p>
+                <p>You have to create account from <a href="https://dashboard.paystack.com/#/signup" target="_blank"
+                                                      rel="noopener noreferrer">Here<span><svg
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                        viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor"
+                                                                                                 d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                        fill="currentColor"
+                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                        class="sr-only">(opens new window)</span></span></a> and then you can find steps here to
+                    generate sectet keys <a
+                            href="https://support.paystack.com/hc/en-us/articles/360011508199-How-do-I-generate-new-API-keys-#:~:text=How%20do%20I%20get%20a,Click%20on%20this."
+                            target="_blank" rel="noopener noreferrer">Here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     aria-hidden="true"
+                                                                                     focusable="false" x="0px" y="0px"
+                                                                                     viewBox="0 0 100 100" width="15"
+                                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a></p>
+                <p>Please use your email into <code>Merchant Email</code></p>
+                <div class="language- extra-class"><pre><code>- PAYSTACK_PUBLIC_KEY=
+- PAYSTACK_SECRET_KEY=
+- PAYSTACK_PAYMENT_URL=https://api.paystack.co
+- PAYSTACK_MERCHANT_EMAIL=
+</code></pre>
+                </div>
+                <p>DO NOT FORGET TO FOLLOW GIVEN STEPS :
+                    You need to add the callback url into your paystack account :
+                    <code>APP_URL/paystack-payment-success</code></p>
+                <p>Set up the Paypal Credentials into env:</p>
+                <p>You have to create account from <a href="https://www.paypal.com/in/webapps/mpp/account-selection" target="_blank"
+                                                      rel="noopener noreferrer">Here<span><svg
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                        viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor"
+                                                                                                 d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                        fill="currentColor"
+                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                        class="sr-only">(opens new window)</span></span></a> and then you can find steps here to
+                    generate keys <a
+                            href="https://www.knowband.com/blog/tips/get-paypal-client-id-secret/"
+                            target="_blank" rel="noopener noreferrer">Here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     aria-hidden="true"
+                                                                                     focusable="false" x="0px" y="0px"
+                                                                                     viewBox="0 0 100 100" width="15"
+                                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a></p>
+                <p>Please use your email into <code>Merchant Email</code></p>
+                <div class="language- extra-class"><pre><code>
+- PAYPAL_CLIENT_ID=
+- PAYPAL_SECRET=
+#change mode to "live" while moving to production
+- PAYPAL_MODE="live"
+</code></pre>
+                </div>
+                <p>Set up the Razorpay Credentials into env:</p>
+                <p>You have to create account from <a href="https://dashboard.razorpay.com/signup" target="_blank"
+                                                      rel="noopener noreferrer">Here<span><svg
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                        viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor"
+                                                                                                 d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                        fill="currentColor"
+                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                        class="sr-only">(opens new window)</span></span></a> and then you can find steps here to
+                    generate keys <a
+                            href="https://www.appypie.com/faqs/how-to-get-client-id-and-secret-key-from-razorpay"
+                            target="_blank" rel="noopener noreferrer">Here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     aria-hidden="true"
+                                                                                     focusable="false" x="0px" y="0px"
+                                                                                     viewBox="0 0 100 100" width="15"
+                                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a></p>
+                <p>Please use your email into <code>Merchant Email</code></p>
+                <div class="language- extra-class"><pre><code>
+- RAZOR_KEY=
+- RAZOR_SECRET=
+</code></pre>
+                </div>
+                <p>Set up the Authorize.net Credentials into env:</p>
+                <p>You have to create account from <a href="https://www.authorize.net/en-us/sign-up.html" target="_blank"
+                                                      rel="noopener noreferrer">Here<span><svg
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                        viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor"
+                                                                                                 d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                        fill="currentColor"
+                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                        class="sr-only">(opens new window)</span></span></a> and then you can find steps here to
+                    generate keys <a
+                            href="https://support.teamsideline.com/hc/en-us/articles/201151957-Authorize-net-API-Login-ID-and-Transaction-Key-In-order-to-connect-a-website-to-the-payment-gateway"
+                            target="_blank" rel="noopener noreferrer">Here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     aria-hidden="true"
+                                                                                     focusable="false" x="0px" y="0px"
+                                                                                     viewBox="0 0 100 100" width="15"
+                                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a></p>
+                <p>Please use your email into <code>Merchant Email</code></p>
+                <div class="language- extra-class"><pre><code>
+- AUTHORIZE_LOGIN_ID
+- AUTHORIZE_TRANSACTION_KEY=
+</code></pre>
+                </div>
+                <p>Set up the Paytm Credentials into env:</p>
+                <p>You can find steps here to
+                    generate keys <a
+                            href="https://business.paytm.com/blog/how-to-generate-api-key-for-payment-gateway-integration-offline-merchants/"
+                            target="_blank" rel="noopener noreferrer">Here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     aria-hidden="true"
+                                                                                     focusable="false" x="0px" y="0px"
+                                                                                     viewBox="0 0 100 100" width="15"
+                                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a></p>
+                <p>Please use your email into <code>Merchant Email</code></p>
+                <div class="language- extra-class"><pre><code>
+- PAYTM_ENVIRONMENT=
+- PAYTM_MERCHANT_ID=
+- PAYTM_MERCHANT_KEY=
+- PAYTM_MERCHANT_WEBSITE=
+- PAYTM_CHANNEL=
+- PAYTM_INDUSTRY_TYPE
+</code></pre>
+                </div>
+
+                <p>Set Zoom configuration it is using in Live Consultations module. So first of you need to create your zoom app into zoom marketplace and need to generate the API Keys and credentials.</p>
+                <ul>
+                    <li><p>Go to <a href="https://marketplace.zoom.us/"
+                                target="_blank" rel="noopener noreferrer">Link<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                         aria-hidden="true"
+                                                                                         focusable="false" x="0px" y="0px"
+                                                                                         viewBox="0 0 100 100" width="15"
+                                                                                         height="15" class="icon outbound"><path
+                                fill="currentColor"
+                                d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                                fill="currentColor"
+                                points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                                class="sr-only">(opens new window)</span></span></a>and do sign in.</p>
+                    </li>
+                    <li><p>Click <code>Develop</code> button on header and select <code>Build</code> App menu.</p></li>
+                    <li><p>Choose the <code>JWT</code> and create an application with the app name that you want.</p></li>
+                    <li><p>Input required information and click <code>Continue</code> until your app will be activated.</p></li>
+                </ul>
+                <p>After completing the above steps, you need to update your <code>.env</code> file by placing below keys inside 
+                    that.</p>
+                <p>Please use your email into <code>Merchant Email</code></p>
+                <div class="language- extra-class"><pre><code>
+- ZOOM_API_URL="https://api.zoom.us/v2/"
+- ZOOM_API_KEY="INPUT_YOUR_ZOOM_API_KEY"
+- ZOOM_API_SECRET="INPUT_YOUR_ZOOM_API_SECRET"
+</code></pre>
+                </div>
+                
+                <h3 id="_4-admin-login"><a href="#_4-admin-login" class="header-anchor">#</a> 4. Admin login</h3>
+                <p>You can do admin login by accessing given URL.</p>
+                <p><code>YOUR_APP_URL/login</code></p>
+                <p>email: <code>admin@infycare.com</code></p>
+                <p>password: <code>123456</code></p>
+                <h3 id="_4-doctor-login"><a href="#_4-doctor-login" class="header-anchor">#</a> 4. Doctor login</h3>
+                <p>You can do doctor login by accessing given URL.</p>
+                <p><code>YOUR_APP_URL/login</code></p>
+                <p>email: <code>doctor@infycare.com</code></p>
+                <p>password: <code>123456</code></p>
+                <h3 id="_4-patient-login"><a href="#_4-patient-login" class="header-anchor">#</a> 4. Patient login</h3>
+                <p>You can do patient login by accessing given URL.</p>
+                <p><code>YOUR_APP_URL/login</code></p>
+                <p>email: <code>patient@infycare.com</code></p>
+                <p>password: <code>123456</code></p>
+                <h2 id="key-features-and-concepts"><a href="#key-features-and-concepts" class="header-anchor">#</a> Key
+                    Features and Concepts</h2>
+                <p>Here are some Key Features and Concepts that InfyCare provides.</p>
+                <h2 id="landing-page"><a href="#landing-page" class="header-anchor">#</a> Landing Page</h2>
+                <p>Its comes up with beautiful landing page, which helps patients to get information about the hospital
+                    and doctors and their specialities.</p>
+                <p>Patient can book appointments from landing page and also registered to system. They also can submit
+                    queries via contact us form.</p>
+                <h2 id="admin-panel"><a href="#admin-panel" class="header-anchor">#</a> Admin Panel</h2>
+                <p>We have created beautiful and user attractive admin panel to manage the contents for landing
+                    page.</p>
+                <p>Admin can manage all the doctors / patients / appointments and also able to create new staff's
+                    account with assigned roles / permissions.</p>
+                <p>You can change the system settings from admin panel, like you can change the hospital schedule time,
+                    change contact email, number, etc.</p>
+                <h3 id="dashboard"><a href="#dashboard" class="header-anchor">#</a> Dashboard</h3>
+                <p>Dashboard is more important thing in each application, as you can get quick information from
+                    there.</p>
+                <p>Here you can get information about today's appointments, total registered patients and etc.</p>
+                <h3 id="staff-management"><a href="#staff-management" class="header-anchor">#</a> Staff Management</h3>
+                <p>You can create new user accounts with specific permissions if you want. Staff can also able to do
+                    login and he can see the lists of modules as per assigned permissions.</p>
+                <h3 id="doctors-management"><a href="#doctors-management" class="header-anchor">#</a> Doctors Management
+                </h3>
+                <p>Here you can see lists of doctors that you have added to your system, right now only admin can add
+                    new doctors. you are also able to change the details of doctor too.</p>
+                <h3 id="patient-management"><a href="#patient-management" class="header-anchor">#</a> Patient Management
+                </h3>
+                <p>Here you can manage the patients that registered via landing page or added by you. You can change
+                    their password and other details from here.</p>
+                <p>You can see lists of appointment booked by specific patients in detail screen.</p>
+                <h3 id="appointments-management"><a href="#appointments-management" class="header-anchor">#</a>
+                    Appointments Management</h3>
+                <p>Appointments are generally for patients, but some case if patient wants admin to book their
+                    appointment, at that time this will be usefull. Admin can book new appointments from here on behalf
+                    of patient.</p>
+                <p>Also, you can see lists of appointments here, there is another option there Calendar view, by
+                    clicking on it you can see the lists of appointments in calendar view.</p>
+                <h3 id="patient-visits-management"><a href="#patient-visits-management" class="header-anchor">#</a>
+                    Patient Visits Management</h3>
+                <p>Admin can add / delete patient visits records from here. Patient visits are the records who will be
+                    entered by the doctors to track patients visits and the other information about their patients.</p>
+                <h3 id="services-categories-management"><a href="#services-categories-management" class="header-anchor">#</a>
+                    Services &amp; Categories Management</h3>
+                <p>Here you can add different kind of Services and its categories, Services are generally used in
+                    appointments. Patient will Select the service while booking the appointments.</p>
+                <p>You can define the service charge per service.</p>
+                <h3 id="front-cms"><a href="#front-cms" class="header-anchor">#</a> Front CMS</h3>
+                <p>Admin can change each content of landing page from here. e,g Upload new images for sliders, change
+                    some texts on it, etc.</p>
+                <h3 id="schedules"><a href="#schedules" class="header-anchor">#</a> Schedules</h3>
+                <p>Schedule means the hospital timing per day. Admin will define the hospital time from Settings -&gt;
+                    Schedules.</p>
+                <p>Then doctors are able to choose time between the hospital time, if Admin is saying that hospital will
+                    be closed on sunday, then doctor will not able to choose schedule time on sunday.</p>
+                <h3 id="settings"><a href="#settings" class="header-anchor">#</a> Settings</h3>
+                <p>Settings will include some other set of modules .</p>
+                <ul>
+                    <li>General Setting</li>
+                    <li>Clinic Schedules</li>
+                    <li>Roles &amp; Permissions</li>
+                    <li>Currencies</li>
+                    <li>Countries</li>
+                    <li>States</li>
+                    <li>Cities</li>
+                </ul>
+                <h2 id="doctor-panel"><a href="#doctor-panel" class="header-anchor">#</a> Doctor Panel</h2>
+                <h3 id="dashboard-2"><a href="#dashboard-2" class="header-anchor">#</a> Dashboard</h3>
+                <p>Doctors can see lists of today's appointments count and other widget in dashboard. they can also able
+                    to see the lists of recent appointments as per day / week / month.</p>
+                <h3 id="appointments"><a href="#appointments" class="header-anchor">#</a> Appointments</h3>
+                <p>Here doctors can see their appointments only, they can later change the status to checked-in,
+                    check-out and cancel.</p>
+                <h3 id="schedules-2"><a href="#schedules-2" class="header-anchor">#</a> Schedules</h3>
+                <p>Doctor can set their availability as per day in this module, so patient will be booked slots
+                    accordingly. if doctors are selecting that Monday they will be available from 10:00 - 12:00 then
+                    patient can see slots between that time only.</p>
+                <h3 id="patient-visits-management-2"><a href="#patient-visits-management-2" class="header-anchor">#</a>
+                    Patient Visits Management</h3>
+                <p>Here doctors can add new visit record for patients, and track their health progresses.</p>
+                <h2 id="patient-panel"><a href="#patient-panel" class="header-anchor">#</a> Patient Panel</h2>
+                <h3 id="dashboard-3"><a href="#dashboard-3" class="header-anchor">#</a> Dashboard</h3>
+                <p>Patient can see lists of appointments in dashboard, they can see today's and upcoming appointments
+                    here.</p>
+                <h3 id="appointments-2"><a href="#appointments-2" class="header-anchor">#</a> Appointments</h3>
+                <p>Here you can book new appointment with specific doctor by selecting different services. Later you can
+                    cancel the appointment if you don't want to go. Also, you can delete your appointment records
+                    too.</p>
+                <h3 id="visits-listing"><a href="#visits-listing" class="header-anchor">#</a> Visits Listing</h3>
+                <p>Here you can see the lists of visits added by your doctors. in visit details screen you are able to
+                    see the lists of prescriptions, notes, observation notes and problems added by doctor.</p></div>
+            <footer class="page-edit"><!----> <!----></footer> <!----> </main>
+    </div>
+    <div class="global-ui"></div>
+</div>
+<script src="../js/styles.js" defer></script>
+<script src="../js/2.js" defer></script>
+<script src="../js/10.js" defer></script>
+</body>
+</html>
