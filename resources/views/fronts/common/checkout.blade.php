@@ -1,6 +1,6 @@
         
         
-        <!-- FINAL TEST -->
+        <!-- FINAL TEST  -->
     <script                                                                                                                                                                                           
      src="https://code.jquery.com/jquery-1.12.4.min.js"                                                                                                                                              
      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="                                                                                                                                 
@@ -58,7 +58,9 @@
                         <option value="">Select Transaction Type</option>                                                                                                                                         
                         <option value="1">Alfa Wallet</option>                                                                                                                                                    
                         <option value="2">Alfalah Bank Account</option>                                                                                                                                                
-                        <option value="3">Credit/Debit Card</option>                                                                                                                                              
+                        <option value="3">Credit/Debit Card</option>   
+                        <option value="4">Jazz/Cash</option>   
+                                                                                                                                                                   
                     </select> 
             </div>
            
@@ -81,29 +83,90 @@
                     <input class="form-control" autocomplete="off"  id="TransactionAmount" name="TransactionAmount" placeholder="Transaction Amount" type="text" readonly value="">   
 
                 </div>
-                <div class="col-md-3 form-group text-start">
-                           
-                </div>
+                <div class="col-md-3 form-group text-start"  id="TID_lable" style="display:none">
+                            Transaction # <span
+                                class="required text-danger">*</span>
+                    <input class="form-control" autocomplete="off"  id="TID" name="TID" placeholder="Transaction ID" type="text" value="" style="display:none">   
+
+                  </div>
+         
            
 
+        </div>
+
+        <div class="row">
+   
+            <div class="col-md-3 form-group text-start"  id="img_div" style="display:none">
+                     <p style="text-align:center;">JazzCash Scan QR Here </p>
+                    <img src="{{ asset('assets/front/images/nijjat/jazzcash-qr.jpeg') }}" alt="jazzCash">
+                    <p style="text-align:center;"> TILL ID: 00224640 </p>
+
+             </div>
         </div>
 
         
                                                                                                                                                                                                
      	
         <div class="col-12 form-group text-center">
-          <button   class="form-control" type="submit" class="btn btn-secondary btn-lg booking-button" id="run">Proceed</button>     
+          <button   class="form-control" type="submit" class="btn btn-secondary btn-lg booking-button" id="run" style="display:block">Proceed</button>   
         </div>                                                                                                       
-     </form>                                                                                                                                                                                           
+     </form>       
+     <button   class="form-control" onclick="jazzCashTransaction()" class="btn btn-secondary btn-lg booking-button" id="save" style="display:none">Save Transaction</button>     
+                                                                                                                                                                                           
                                                                                                                                                                                                        
 </div>                                                                                                                                                                                    
        
 
         @section('front-js')
-         
-        <!-- Get Services Details HEre With Charges -->
-        
+       
+        <!-- JazzCash Payment Mehtod Here -->
+
         <script>
+             
+           var  payment_method_id = 0 ;
+
+           function jazzCashTransaction() {
+                      alert("Save Your Transaction");
+            }
+            
+            $('#TransactionTypeId').on('change',function(){
+
+                 payment_method_id =   this.value ;
+                 var transaction_id = document.querySelector('#TID');
+                 var transaction_lable = document.querySelector('#TID_lable');
+                 var img_div = document.querySelector('#img_div');
+                 var run = document.querySelector('#run');
+                 var save = document.querySelector('#save');
+                 
+                 
+
+                 if(payment_method_id  == 4){
+
+                
+                    transaction_id.style.display = "block";
+                    transaction_lable.style.display = "block";
+                    img_div.style.display = "block";
+                    save.style.display = "block";
+                    
+                    run.style.display = "none";
+
+                    
+                    
+                 }else{
+
+                    transaction_id.style.display = "none";
+                    transaction_lable.style.display = "none";
+                    img_div.style.display = "none";
+                    run.style.display = "block";
+                    save.style.display = "none";
+                 }
+                
+
+
+            });
+
+
+       
             $(document).ready(function () {
               
                 $.ajax({
@@ -179,20 +242,16 @@
             });
         });
 
-</script> 
+    </script> 
 
 
         <script type="text/javascript">    
-        
-       
+      
          $(function () {                                                                                                                                                                                        
-                                                                                                                                                                                             
-            
-
+                     
             $("#run").click(function (e) {                                                                                                                                                                             
-                e.preventDefault();          
-                
-                
+                e.preventDefault();      
+            
                 var firstName = $('#template-medical-first_name').val();
                 var lastName = $('#template-medical-last_name').val();
                 var email = $('#template-medical-email').val();
@@ -238,12 +297,12 @@
                     return false;
                 }
 
-               
+            
                 $.ajax({
                         url: '{{route('front.service.buy')}}',
                         type: 'POST',
                         data: $("#PageRedirectionForm").serialize(),
-                      
+                    
                         success: function success(result) {
                         if (result.success) {
                             // var name =result.data.response;
@@ -257,7 +316,7 @@
                             // }));
                             // }   
 
-                           
+                        
                         }
                         },
                         error: function error(result) {
@@ -267,13 +326,13 @@
                         $('.book-appointment-message').html(response).delay(5000).hide('slow');
                         },
                         complete: function complete() {
-                      
+                    
                         }
                     });
 
 
 
-                                                                                                                                                           
+                                                                                                                                                        
                 });   
                 
                 
@@ -282,28 +341,30 @@
 
 
             });                                                                                                                                                                                                            
+                                                                                                                                                                                                             
+            function submitRequest(formName) {                                                                                                                                                                             
                                                                                                                                                                                                                     
-                    function submitRequest(formName) {                                                                                                                                                                             
-                                                                                                                                                                                                                            
-                    var mapString = '', hashName = 'RequestHash';                                                                                                                                                              
-                    if (formName == "HandshakeForm") {                                                                                                                                                                         
-                        hashName = 'HS_' + hashName;                                                                                                                                                                           
-                    }                                                                                                                                                                                                          
-                                                                                                                                                                                                                            
-                    $("#" + formName+" :input").each(function () {                                                                                                                                                             
-                        if ($(this).attr('id') != '') {                                                                                                                                                                        
-                            mapString += $(this).attr('id') + '=' + $(this).val() + '&';                                                                                                                                       
-                        }                                                                                                                                                                                                      
-                    });                                                                                                                                                                                                        
-                                                                                                                                                                                                                            
-                    $("#" + hashName).val(CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(mapString.substr(0, mapString.length - 1)), CryptoJS.enc.Utf8.parse($("#Key1").val()),                                                  
-                        {                                                                                                                                                                                                      
-                            keySize: 128 / 8,                                                                                                                                                                                  
-                            iv: CryptoJS.enc.Utf8.parse($("#Key2").val()),                                                                                                                                                     
-                            mode: CryptoJS.mode.CBC,                                                                                                                                                                           
-                            padding: CryptoJS.pad.Pkcs7                                                                                                                                                                        
-                        }));                                                                                                                                                                                                   
-                    }                                                                                                                                                                                                              
+            var mapString = '', hashName = 'RequestHash';                                                                                                                                                              
+            if (formName == "HandshakeForm") {                                                                                                                                                                         
+                hashName = 'HS_' + hashName;                                                                                                                                                                           
+            }                                                                                                                                                                                                          
+                                                                                                                                                                                                                    
+            $("#" + formName+" :input").each(function () {                                                                                                                                                             
+                if ($(this).attr('id') != '') {                                                                                                                                                                        
+                    mapString += $(this).attr('id') + '=' + $(this).val() + '&';                                                                                                                                       
+                }                                                                                                                                                                                                      
+            });                                                                                                                                                                                                        
+                                                                                                                                                                                                                    
+            $("#" + hashName).val(CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(mapString.substr(0, mapString.length - 1)), CryptoJS.enc.Utf8.parse($("#Key1").val()),                                                  
+                {                                                                                                                                                                                                      
+                    keySize: 128 / 8,                                                                                                                                                                                  
+                    iv: CryptoJS.enc.Utf8.parse($("#Key2").val()),                                                                                                                                                     
+                    mode: CryptoJS.mode.CBC,                                                                                                                                                                           
+                    padding: CryptoJS.pad.Pkcs7                                                                                                                                                                        
+                }));                                                                                                                                                                                                   
+            }           
+            
+      
                                                                                                                                                                                                                             
      </script>     
     

@@ -44,97 +44,166 @@
                         <option value="">Select Transaction Type</option>                                                                                                                                         
                         <option value="1">Alfa Wallet</option>                                                                                                                                                    
                         <option value="2">Alfalah Bank Account</option>                                                                                                                                                
-                        <option value="3">Credit/Debit Card</option>                                                                                                                                              
+                        <option value="3">Credit/Debit Card</option>   
+                        <option value="4">Jazz/Cash</option>                                                                                                                                             
                     </select> 
             </div>
 
+            <div class="col-md-3 form-group text-start"  id="TID_lable" style="display:none">
+                            Transaction # <span
+                                class="required text-danger">*</span>
+                    <input class="form-control" autocomplete="off"  id="TID" name="TID" placeholder="Transaction ID" type="text" value="" style="display:none">   
+
+             </div>
+
         </div>
 
+        <div class="row">
+   
+            <div class="col-md-3 form-group text-start"  id="img_div" style="display:none">
+                        <p style="text-align:center;">JazzCash Scan QR Here </p>
+                    <img src="{{ asset('assets/front/images/nijjat/jazzcash-qr.jpeg') }}" alt="jazzCash">
+                    <p style="text-align:center;"> TILL ID: 00224640 </p>
+
+                </div>
+        </div>
+        
+
             <button type="submit" class="btn btn-custon-four btn-danger" id="run">RUN</button>                                                                                                            
-   </form>                                                                                                                                                                                           
+   </form>     
+   <button   class="form-control" onclick="jazzCashTransaction()" class="btn btn-secondary btn-lg booking-button" id="save" style="display:none">Save Transaction</button>     
+                                                                                                                                                                                              
                                                                                                                                                                                                      
-   <script type="text/javascript">                                                                                                                                                                   
-      $(function () {                                                                                                                                                                                        
+   <script type="text/javascript">      
+   
+        var  payment_method_id = 0 ;
+
+        function jazzCashTransaction() {
+                alert("Save Your Transaction");
+        }
+
+        $('#TransactionTypeId').on('change',function(){
+
+            payment_method_id =   this.value ;
+            var transaction_id = document.querySelector('#TID');
+            var transaction_lable = document.querySelector('#TID_lable');
+            var img_div = document.querySelector('#img_div');
+            var run = document.querySelector('#run');
+            var save = document.querySelector('#save');
+
+
+
+            if(payment_method_id  == 4){
+
+
+            transaction_id.style.display = "block";
+            transaction_lable.style.display = "block";
+            img_div.style.display = "block";
+            save.style.display = "block";
+            
+            run.style.display = "none";
+
+            
+            
+            }else{
+
+            transaction_id.style.display = "none";
+            transaction_lable.style.display = "none";
+            img_div.style.display = "none";
+            run.style.display = "block";
+            save.style.display = "none";
+            }
+
+
+
+            });
+
+
+
+
+
+        
+       $(function () {                                                                                                                                                                                        
                                                                                                                                                                                                              
-  $("#handshake").click(function (e) {                                                                                                                                                                       
-      e.preventDefault();                                                                                                                                                                                    
-      $("#handshake").attr('disabled', 'disabled');                                                                                                                                                          
-      submitRequest("HandshakeForm");                                                                                                                                                                        
-      if ($("#HS_IsRedirectionRequest").val() == "1") {                                                                                                                                                      
-          document.getElementById("HandshakeForm").submit();                                                                                                                                                 
-      }                                                                                                                                                                                                      
-      else {                                                                                                                                                                                                 
-          var myData = {                                                                                                                                                                                     
-              HS_MerchantId : $("#HS_MerchantId").val(),                                                                                                                                                     
-              HS_StoreId : $("#HS_StoreId").val(),                                                                                                                                                     
-              HS_MerchantHash : $("#HS_MerchantHash").val(),                                                                                                                                                 
-              HS_MerchantUsername : $("#HS_MerchantUsername").val(),                                                                                                                                         
-              HS_MerchantPassword : $("#HS_MerchantPassword").val(),                                                                                                                                         
-              HS_IsRedirectionRequest : $("#HS_IsRedirectionRequest").val(),                                                                                                                                 
-              HS_ReturnURL : $("#HS_ReturnURL").val(),                                                                                                                                                       
-              HS_RequestHash : $("#HS_RequestHash").val(),                                                                                                                                                   
-              HS_ChannelId: $("#HS_ChannelId").val(),                                                                                                                                                        
-              HS_TransactionReferenceNumber: $("#HS_TransactionReferenceNumber").val(),                                                                                                                      
-          }                                                                                                                                                                                                  
-                                                                                                                                                                                                             
-                                                                                                                                                                                                             
-          $.ajax({                                                                                                                                                                                           
-              type: 'POST',                                                                                                                                                                                  
-              url: 'https://payments.bankalfalah.com/HS/HS/HS',                                                                                                                                            
-              contentType: "application/x-www-form-urlencoded",                                                                                                                                                
-              data: myData,                                                                                                                                                                  
-              dataType: "json",                                                                                                                                                                              
-              beforeSend: function () {                                                                                                                                                                      
-              },                                                                                                                                                                                             
-              success: function (r) {                                                                                                                                                                        
-                  if (r != '') {                                                                                                                                                                             
-                      if (r.success == "true") {                                                                                                                                                             
-                          $("#AuthToken").val(r.AuthToken);                                                                                                                                                  
-                          $("#ReturnURL").val(r.ReturnURL);                                                                                                                                                  
-                          alert('Success: Handshake Successful');                                                                                                                                
-                      }                                                                                                                                                                                      
-                      else                                                                                                                                                                                      
-                      {                                                                                                                                                                                      
-                          alert('Error: Handshake Unsuccessful');                                                                                                                                                                                       
-                      }						                                                                                                                                                                                      
-                  }                                                                                                                                                                                          
-                  else                                                                                                                                                                                          
-                  {                                                                                                                                                                                          
-                      alert('Error: Handshake Unsuccessful');                                                                                                                                                                                            
-                  }					                                                                                                                                                                                          
-              },                                                                                                                                                                                             
-              error: function (error) {                                                                                                                                                                      
-                  alert('Error: An error occurred');                                                                                                                                               
-              },                                                                                                                                                                                             
-              complete: function(data) {                                                                                                                                                                     
-                  $("#handshake").removeAttr('disabled', 'disabled');                                                                                                                                        
-              }                                                                                                                                                                                              
-          });                                                                                                                                                                                                
-      }                                                                                                                                                                                                      
-                                                                                                                                                                                                             
-  });                                                                                                                                                                                                        
-                                                                                                                                                                                                             
-  $("#run").click(function (e) {                                                                                                                                                                             
-      e.preventDefault();                                                                                                                                                                                    
-      submitRequest("PageRedirectionForm");                                                                                                                                                                  
-      document.getElementById("PageRedirectionForm").submit();                                                                                                                                               
-       });                                                                                                                                                                                                        
-   });                                                                                                                                                                                                            
-                                                                                                                                                                                                             
-   function submitRequest(formName) {                                                                                                                                                                             
-                                                                                                                                                                                                             
-  var mapString = '', hashName = 'RequestHash';                                                                                                                                                              
-  if (formName == "HandshakeForm") {                                                                                                                                                                         
-      hashName = 'HS_' + hashName;                                                                                                                                                                           
-  }                                                                                                                                                                                                          
-                                                                                                                                                                                                             
-  $("#" + formName+" :input").each(function () {                                                                                                                                                             
-      if ($(this).attr('id') != '') {                                                                                                                                                                        
-          mapString += $(this).attr('id') + '=' + $(this).val() + '&';                                                                                                                                       
-      }                                                                                                                                                                                                      
-  });                                                                                                                                                                                                        
-                                                                                                                                                                                                             
-  $("#" + hashName).val(CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(mapString.substr(0, mapString.length - 1)), CryptoJS.enc.Utf8.parse($("#Key1").val()),                                                  
+            $("#handshake").click(function (e) {                                                                                                                                                                       
+                e.preventDefault();                                                                                                                                                                                    
+                $("#handshake").attr('disabled', 'disabled');                                                                                                                                                          
+                submitRequest("HandshakeForm");                                                                                                                                                                        
+                if ($("#HS_IsRedirectionRequest").val() == "1") {                                                                                                                                                      
+                    document.getElementById("HandshakeForm").submit();                                                                                                                                                 
+                }                                                                                                                                                                                                      
+                else {                                                                                                                                                                                                 
+                    var myData = {                                                                                                                                                                                     
+                        HS_MerchantId : $("#HS_MerchantId").val(),                                                                                                                                                     
+                        HS_StoreId : $("#HS_StoreId").val(),                                                                                                                                                     
+                        HS_MerchantHash : $("#HS_MerchantHash").val(),                                                                                                                                                 
+                        HS_MerchantUsername : $("#HS_MerchantUsername").val(),                                                                                                                                         
+                        HS_MerchantPassword : $("#HS_MerchantPassword").val(),                                                                                                                                         
+                        HS_IsRedirectionRequest : $("#HS_IsRedirectionRequest").val(),                                                                                                                                 
+                        HS_ReturnURL : $("#HS_ReturnURL").val(),                                                                                                                                                       
+                        HS_RequestHash : $("#HS_RequestHash").val(),                                                                                                                                                   
+                        HS_ChannelId: $("#HS_ChannelId").val(),                                                                                                                                                        
+                        HS_TransactionReferenceNumber: $("#HS_TransactionReferenceNumber").val(),                                                                                                                      
+                    }                                                                                                                                                                                                  
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                                        
+                    $.ajax({                                                                                                                                                                                           
+                        type: 'POST',                                                                                                                                                                                  
+                        url: 'https://payments.bankalfalah.com/HS/HS/HS',                                                                                                                                            
+                        contentType: "application/x-www-form-urlencoded",                                                                                                                                                
+                        data: myData,                                                                                                                                                                  
+                        dataType: "json",                                                                                                                                                                              
+                        beforeSend: function () {                                                                                                                                                                      
+                        },                                                                                                                                                                                             
+                        success: function (r) {                                                                                                                                                                        
+                            if (r != '') {                                                                                                                                                                             
+                                if (r.success == "true") {                                                                                                                                                             
+                                    $("#AuthToken").val(r.AuthToken);                                                                                                                                                  
+                                    $("#ReturnURL").val(r.ReturnURL);                                                                                                                                                  
+                                    alert('Success: Handshake Successful');                                                                                                                                
+                                }                                                                                                                                                                                      
+                                else                                                                                                                                                                                      
+                                {                                                                                                                                                                                      
+                                    alert('Error: Handshake Unsuccessful');                                                                                                                                                                                       
+                                }						                                                                                                                                                                                      
+                            }                                                                                                                                                                                          
+                            else                                                                                                                                                                                          
+                            {                                                                                                                                                                                          
+                                alert('Error: Handshake Unsuccessful');                                                                                                                                                                                            
+                            }					                                                                                                                                                                                          
+                        },                                                                                                                                                                                             
+                        error: function (error) {                                                                                                                                                                      
+                            alert('Error: An error occurred');                                                                                                                                               
+                        },                                                                                                                                                                                             
+                        complete: function(data) {                                                                                                                                                                     
+                            $("#handshake").removeAttr('disabled', 'disabled');                                                                                                                                        
+                        }                                                                                                                                                                                              
+                    });                                                                                                                                                                                                
+                }                                                                                                                                                                                                      
+                                                                                                                                                                                                                        
+            });                                                                                                                                                                                                        
+                                                                                                                                                                                                                        
+            $("#run").click(function (e) {                                                                                                                                                                             
+                e.preventDefault();                                                                                                                                                                                    
+                submitRequest("PageRedirectionForm");                                                                                                                                                                  
+                document.getElementById("PageRedirectionForm").submit();                                                                                                                                               
+                });                                                                                                                                                                                                        
+            });                                                                                                                                                                                                            
+                                                                                                                                                                                                                        
+            function submitRequest(formName) {                                                                                                                                                                             
+                                                                                                                                                                                                                        
+            var mapString = '', hashName = 'RequestHash';                                                                                                                                                              
+            if (formName == "HandshakeForm") {                                                                                                                                                                         
+                hashName = 'HS_' + hashName;                                                                                                                                                                           
+            }                                                                                                                                                                                                          
+                                                                                                                                                                                                                        
+            $("#" + formName+" :input").each(function () {                                                                                                                                                             
+                if ($(this).attr('id') != '') {                                                                                                                                                                        
+                    mapString += $(this).attr('id') + '=' + $(this).val() + '&';                                                                                                                                       
+                }                                                                                                                                                                                                      
+            });                                                                                                                                                                                                        
+                                                                                                                                                                                                                        
+            $("#" + hashName).val(CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(mapString.substr(0, mapString.length - 1)), CryptoJS.enc.Utf8.parse($("#Key1").val()),                                                  
       {                                                                                                                                                                                                      
           keySize: 128 / 8,                                                                                                                                                                                  
           iv: CryptoJS.enc.Utf8.parse($("#Key2").val()),                                                                                                                                                     
